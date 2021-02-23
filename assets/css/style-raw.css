@@ -118,6 +118,11 @@ header {
     display: flex;
     align-items: center;
     border-radius: 0px 0px 8px 8px;
+    transition: .4s;
+}
+
+.btn-buy:hover {
+    background: #D1D126;
 }
 
 .btn-buy svg {
@@ -162,6 +167,17 @@ footer p {
     background: var(--main-color);
     box-shadow: -5px 0px 6px rgba(0, 0, 0, 0.13);
     z-index: 99;
+    animation-duration: 1.5s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from{
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
 }
 
 .aside-header {
@@ -196,7 +212,19 @@ footer p {
     margin-left: 47px;
     display: flex;
     position: relative;
+    animation-duration: 1s;
+    animation-name: aside-block;
 }
+
+@keyframes aside-block {
+    0%   {opacity: 0;}
+    25%  {opacity: 0;}
+    50%  {opacity: 0.34;}
+    75%  {opacity: 0.67;}
+    100% {opacity: 1;}
+}
+
+
 
 .block2 {
     margin-top: 22px;
